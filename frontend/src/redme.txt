@@ -1,0 +1,115 @@
+# 🚀 MERN Project Setup (Commands Only)
+
+---
+
+## 📁 1. Create Project Folder
+
+```bash
+mkdir mern-project
+cd mern-project
+```
+
+---
+
+## ⚙️ 2. Backend Setup
+
+```bash
+mkdir backend
+cd backend
+npm init -y
+npm install express mongoose cors dotenv
+npm install -D nodemon
+```
+
+---
+
+## 📜 Add Scripts (backend/package.json)
+
+```json
+"scripts": {
+  "start": "node index.js",
+  "dev": "nodemon index.js"
+}
+```
+
+---
+
+## ▶️ Run Backend
+
+```bash
+npm run dev
+```
+
+---
+
+## 🎨 3. Frontend Setup (Vite)
+
+```bash
+cd ..
+npm create vite@latest frontend
+cd frontend
+npm install
+```
+
+---
+
+## 📦 Install Frontend Packages
+
+```bash
+npm install axios react-router-dom
+```
+
+---
+
+## ▶️ Run Frontend
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔌 4. Environment Setup
+
+### frontend/.env
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+### backend/.env
+
+```env
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+```
+
+---
+
+## ▶️ 5. Run Full Project
+
+### Terminal 1
+
+```bash
+cd backend
+npm run dev
+```
+
+### Terminal 2
+
+```bash
+cd frontend
+npm run dev
+```
+
+---
+
+## 📦 6. Build Frontend
+
+```bash
+npm run build
+```
+
+---
+
+# ✅ Done
